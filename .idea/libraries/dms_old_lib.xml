@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dms.old.lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dms.old/lib/mysql-connector-java-8.0.27.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
