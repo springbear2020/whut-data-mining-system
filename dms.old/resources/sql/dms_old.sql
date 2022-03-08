@@ -19,9 +19,9 @@
 -- Current Database: `dms`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dms` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dms_old` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
-USE `dms`;
+USE `dms_old`;
 
 --
 -- Table structure for table `gather_logrec`

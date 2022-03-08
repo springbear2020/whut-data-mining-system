@@ -1,38 +1,10 @@
-> Gitee 开源项目链接：[Data Mining System](https://gitee.com/Spring-_-Bear/DMS)
-
-# 基于 JavaSE 的数据挖掘系统的设计与实现
-
-## 系统简介
+## 一、系统简介
 
  - 基于 Java SE 的数据挖掘系统：基于客户端服务器端（Client-Server，C-S）模式，实现日志与物流数据信息的采集、匹配、保存、显示等功能，为数据分析挖掘提供基础支撑。
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101333_ed21b842_8411295.png "dms.png")
 
-## 界面显示
-
-- 控制台程序
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101343_a40af24b_8411295.png "dos.png")
-
-
-
-- 登录界面
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101352_01a76cc4_8411295.png "login.png")
-
-
-
-- 注册界面
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101401_68933e6e_8411295.png "register.png")
-
-
-
-- 主界面
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101411_0db7e197_8411295.png "main.png")
-
-## 需求分析
+## 二、需求分析
 
 - C-S 模式：系统包括客户端应用程序、服务器端应用程序
 - JDBC 数据库保存和查询：用户和数据信息的保存
@@ -40,7 +12,7 @@
 - GUI 主界面设计与功能实现：能够实现日志和物流信息的数据采集（录入），登录登出对匹配、信息保存和数据显示等功能
 - Socket 通信：客户端与服务器端交互，客户端能够将数据发送到服务器端，服务器端接收客户端发送的日志和物流信息，进行保存和处理；服务端根据用户发出的请求，从数据库中查询对应信息并发返回给客户端
 
-## 任务分配
+## 三、任务分配
 
 1. 基于控制台的系统数据采集、匹配、显示和记录功能实现
 
@@ -78,7 +50,7 @@
 
       6.2 数据查询：客户端应用程序发出请求，服务端程序根据客户端发出的请求从数据库中查询出相应信息并返回给客户端，客户端根系服务端返回的信息处理后显示到界面
 
-## 功能要求
+## 四、功能要求
 
 1. 用户登录和注册功能：用户验证口令通过后登录系统，新用户进行注册，并将注册信息保存数据库
 
@@ -102,7 +74,7 @@
 
       5.2 服务器数据查询功能：当点击客户端显示数据功能时，服务器端从数据库中查找符合条件的数据，并发送到客户端；客户端将数据处理后以表格形式显示到主界面
 
-## 项目框架
+## 五、项目框架
 
 
 ```
@@ -143,3 +115,40 @@ DMS
     	├── DbUtil                    -- 数据库 dml 操作工具类
     	├── DruidUtil                 -- 德鲁伊连接池类
 ```
+
+## 六、系统展示
+
+1. 用户成功注册
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/34d9248a0a9d499c8611d14e61212ae6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_13,color_FFFFFF,t_70,g_se,x_16#pic_center)
+
+2. 用户名已存在
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2db12bab0e75447e8cc909fe25d7c77d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_13,color_FFFFFF,t_70,g_se,x_16#pic_center)
+3. 用户登录
+![在这里插入图片描述](https://img-blog.csdnimg.cn/9cad816a428445aab01f229090617a5b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_10,color_FFFFFF,t_70,g_se,x_16#pic_center)
+4. 日志数据采集
+![在这里插入图片描述](https://img-blog.csdnimg.cn/7144a3c7cea04f6e8f15549799f3c08f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+5. 日志数据匹配
+![在这里插入图片描述](https://img-blog.csdnimg.cn/47284a8337fc4e5f983e8b26becc2a1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+6. 日志数据保存到本地
+![在这里插入图片描述](https://img-blog.csdnimg.cn/c50df0205c8e4c90868802ac31d2361e.png#pic_center)
+7. 日志数据保存到数据库
+![在这里插入图片描述](https://img-blog.csdnimg.cn/8088d6ff88084cc8ad97dbe0dcd6f95d.png#pic_center)
+8. 用户信息管理
+![在这里插入图片描述](https://img-blog.csdnimg.cn/379e9e0860ca4ea6aa3075fd5cd55af5.png#pic_center)
+9. 系统帮助
+![在这里插入图片描述](https://img-blog.csdnimg.cn/0020ccdad0a74a53b3d6f4430936320a.png#pic_center)
+ 10. 物流数据采集
+![在这里插入图片描述](https://img-blog.csdnimg.cn/11573e338d2e4d97b39b50292b497ec3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+
+ 11. 物流数据匹配
+![在这里插入图片描述](https://img-blog.csdnimg.cn/63c04202743c412dacab00cb4174b29e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+
+ 12. 物流数据保存到本地
+![在这里插入图片描述](https://img-blog.csdnimg.cn/71f1a7553abf4f9d8083ec57584f4b91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+
+ 13. 物流数据保存到数据库
+![在这里插入图片描述](https://img-blog.csdnimg.cn/5c25a669e5f84fb3a57d9f93b147c961.png#pic_center)
+
+ 14. 控制台程序演示
+![在这里插入图片描述](https://img-blog.csdnimg.cn/29df648270fe4856aae753c7145ea86c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)

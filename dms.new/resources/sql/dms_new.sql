@@ -19,9 +19,9 @@
 -- Current Database: `dms`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dms` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dms_new` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `dms`;
+USE `dms_new`;
 
 --
 -- Table structure for table `gather_log`
