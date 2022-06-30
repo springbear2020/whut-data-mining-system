@@ -8,23 +8,23 @@
 > 4. 修改数据库连接信息：修改 `src/main/resources/mysql.properties` 中的数据库连接信息，设置你自己的用户名和密码 
 > 5. 启动服务器和客户端：运行 `src/main/java/com/qst/dms/DmsNetServer` 类
 > 7. 登录：默认用户名和密码均为 `admin`
-> 
->方案二：
-> 
->1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
-> 
->2. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
-> 
->3. 创建数据库用户：在 MySQL 控制台创建 `admin` 用户，密码也为 `admin`，并赋予 admin 用户所有操作权限
-> 
->   ```sql
+>
+> 方案二：
+>
+> 1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
+>
+> 2. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
+>
+> 3. 创建数据库用户：在 MySQL 控制台创建 `admin` 用户，密码也为 `admin`，并赋予 admin 用户所有操作权限
+>
+>    ```sql
 >    create user 'admin'@'localhost' identified by 'admin';
 >    grant all on online_bookhouse.* to 'admin'@'localhost' with grant option;
 >    ```
-> 
->4. 启动服务器和客户端：在命令行控制台进入 RELEASE 目录下，使用 `java -jar data-mining-system.jar` 命令执行
-> 
->6. 登录：账号登录默认用户名和密码均为 `admin`
+>
+> 4. 启动服务器和客户端：在命令行控制台进入 RELEASE 目录下，使用 `java -jar data-mining-system.jar` 命令执行
+>
+> 5. 登录：账号登录默认用户名和密码均为 `admin`
 
 # 一、系统简介
 
