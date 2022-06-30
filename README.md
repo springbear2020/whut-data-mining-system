@@ -1,8 +1,38 @@
+> 项目部署运行步骤如下：
+>
+> 方案一：
+>
+> 1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
+> 2. 打开工程：使用 IntelliJ IDEA 打开克隆的仓库或解压的工程文件，而后使用 Maven 工具更新工程模块依赖
+> 3. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
+> 4. 修改数据库连接信息：修改 `src/main/resources/mysql.properties` 中的数据库连接信息，设置你自己的用户名和密码 
+> 5. 启动服务器和客户端：运行 `src/main/java/com/qst/dms/DmsNetServer` 类
+> 7. 登录：默认用户名和密码均为 `admin`
+> 
+>方案二：
+> 
+>1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
+> 
+>2. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
+> 
+>3. 创建数据库用户：在 MySQL 控制台创建 `admin` 用户，密码也为 `admin`，并赋予 admin 用户所有操作权限
+> 
+>   ```sql
+>    create user 'admin'@'localhost' identified by 'admin';
+>    grant all on online_bookhouse.* to 'admin'@'localhost' with grant option;
+>    ```
+> 
+>4. 启动服务器和客户端：在命令行控制台进入 RELEASE 目录下，使用 `java -jar data-mining-system.jar` 命令执行
+> 
+>6. 登录：账号登录默认用户名和密码均为 `admin`
+
 # 一、系统简介
 
 ​		基于 Java SE 的数据挖掘系统：基于客户端服务器端（Client-Server，C-S）模式，实现日志与物流数据信息的采集、匹配、保存、显示等功能，为数据分析挖掘提供基础支撑
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101333_ed21b842_8411295.png "dms.png")
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/f494f94ccff14dbf88f21e4157eb545d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 # 二、需求分析
 
@@ -15,6 +45,8 @@
 4. GUI 主界面设计与功能实现：能够实现日志和物流信息的数据采集（录入），登录登出对匹配、信息保存和数据显示等功能
 
 5. Socket 通信：客户端与服务器端交互，客户端能够将数据发送到服务器端，服务器端接收客户端发送的日志和物流信息，进行保存和处理；服务端根据用户发出的请求，从数据库中查询对应信息并发返回给客户端
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/1b338a12104d4b749af82cdeeff04e73.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 # 三、任务分配
 
@@ -54,6 +86,8 @@
 
       5.2 数据查询：客户端应用程序发出请求，服务端程序根据客户端发出的请求从数据库中查询出相应信息并返回给客户端，客户端根系服务端返回的信息处理后显示到界面
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/ea5b18dec2eb49bc84524e4ea10eceef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+
 # 四、功能要求
 
 1. 用户登录和注册功能：用户验证口令通过后登录系统，新用户进行注册，并将注册信息保存数据库
@@ -77,6 +111,8 @@
       5.1 客户端的数据发送功能：在客户端通过 Socket 技术向服务器端发送匹配的日志数据和物流数据；当数据发送成功后，清空客户端暂时存放数据的集合，弹出信息提醒；客户端收到相应数据后保存到数据库
 
       5.2 服务器数据查询功能：当点击客户端显示数据功能时，服务器端从数据库中查找符合条件的数据，并发送到客户端；客户端将数据处理后以表格形式显示到主界面
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/296de39a32c44f6187c3c983c4bead6a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 # 五、项目结构
 
@@ -122,82 +158,41 @@ DMS
 
 # 六、功能演示
 
-1. 用户成功注册
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/34d9248a0a9d499c8611d14e61212ae6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_13,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-2. 用户名已存在
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2db12bab0e75447e8cc909fe25d7c77d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_13,color_FFFFFF,t_70,g_se,x_16#pic_center)
+1. 用户注册
 
 
-3. 用户登录
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222614551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9cad816a428445aab01f229090617a5b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_10,color_FFFFFF,t_70,g_se,x_16#pic_center)
+2. 用户登录
 
 
-4. 日志数据采集
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222608724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7144a3c7cea04f6e8f15549799f3c08f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+3. 主界面
 
+   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222620961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-5. 日志数据匹配
+4. 物流发送数据库保存
 
+   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222627640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/47284a8337fc4e5f983e8b26becc2a1b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
+5. 日志数据发送到服务器保存
 
+   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222633296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-6. 日志数据保存到本地
+6. 日志和数据查询（线程定时更新数据）
 
+   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222638722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c50df0205c8e4c90868802ac31d2361e.png#pic_center)
+7. 版权信息
 
+   ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021050322264319.png#pic_center)
 
-7. 日志数据保存到数据库
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8088d6ff88084cc8ad97dbe0dcd6f95d.png#pic_center)
-
-
-8. 用户信息管理
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/379e9e0860ca4ea6aa3075fd5cd55af5.png#pic_center)
-
-
-9. 系统帮助
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0020ccdad0a74a53b3d6f4430936320a.png#pic_center)
-
-
- 10. 物流数据采集
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/11573e338d2e4d97b39b50292b497ec3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-
-
- 11. 物流数据匹配
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63c04202743c412dacab00cb4174b29e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
- 12. 物流数据保存到本地
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/71f1a7553abf4f9d8083ec57584f4b91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
- 13. 物流数据保存到数据库
-
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5c25a669e5f84fb3a57d9f93b147c961.png#pic_center)
-
-
- 14. 控制台程序演示
+8. 控制台程序演示
 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/29df648270fe4856aae753c7145ea86c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
