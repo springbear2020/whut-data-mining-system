@@ -3,11 +3,11 @@
 > 方案一：
 >
 > 1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
-> 2. 打开工程：使用 IntelliJ IDEA 打开克隆的仓库或解压的工程文件，而后使用 Maven 工具更新工程模块依赖
+> 2. 打开工程：使用 `IntelliJ IDEA` 打开克隆的仓库或解压的工程文件，而后使用 `Maven` 工具更新工程模块依赖
 > 3. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
 > 4. 修改数据库连接信息：修改 `src/main/resources/mysql.properties` 中的数据库连接信息，设置你自己的用户名和密码 
 > 5. 启动服务器和客户端：运行 `src/main/java/com/qst/dms/DmsNetServer` 类
-> 7. 登录：默认用户名和密码均为 `admin`
+> 7. 登录系统：默认用户名和密码均为 `admin`
 >
 > 方案二：
 >
@@ -22,13 +22,13 @@
 >    grant all on data_mining_system.* to 'admin'@'localhost' with grant option;
 >    ```
 >
-> 4. 启动服务器和客户端：在命令行控制台进入 RELEASE 目录下，使用 `java -jar data-mining-system.jar` 命令执行
+> 4. 启动服务器和客户端：在命令行控制台进入 `RELEASE` 目录下，使用 `java -jar data-mining-system.jar` 命令运行 jar 包
 >
-> 5. 登录：账号登录默认用户名和密码均为 `admin`
+> 5. 登录系统：默认用户名和密码均为 `admin`
 
 # 一、系统简介
 
-​		基于 Java SE 的数据挖掘系统：基于客户端服务器端（Client-Server，C-S）模式，实现日志与物流数据信息的采集、匹配、保存、显示等功能，为数据分析挖掘提供基础支撑
+基于 Java SE 的数据挖掘系统：基于客户端服务器端（Client-Server，C-S）模式，实现日志与物流数据信息的采集、匹配、保存、显示等功能，为数据分析挖掘提供基础支撑。
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101333_ed21b842_8411295.png "dms.png")
 
@@ -158,41 +158,41 @@ DMS
 
 # 六、功能演示
 
-
-
-1. 用户注册
+## 1. 用户注册
 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222614551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
 
-2. 用户登录
+## 2. 用户登录
 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222608724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
 
-3. 主界面
+## 3. 主界面
 
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222620961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-4. 物流发送数据库保存
+## 4. 物流数据发送保存
 
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222627640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-5. 日志数据发送到服务器保存
+## 5. 日志数据发送保存
 
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222633296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-6. 日志和数据查询（线程定时更新数据）
+## 6. 日志和数据查询
+
+>  单线程定时更新数据
 
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222638722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
-7. 版权信息
+## 7. 版权信息
 
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021050322264319.png#pic_center)
 
-8. 控制台程序演示
+## 8. 控制台程序
 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/29df648270fe4856aae753c7145ea86c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
