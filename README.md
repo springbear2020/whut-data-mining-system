@@ -1,32 +1,34 @@
-> 项目部署运行步骤如下：
->
-> 方案一：
->
-> 1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
-> 2. 打开工程：使用 `IntelliJ IDEA` 打开克隆的仓库或解压的工程文件，而后使用 `Maven` 工具更新工程模块依赖
-> 3. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
-> 4. 修改数据库连接信息：修改 `src/main/resources/mysql.properties` 中的数据库连接信息，设置你自己的用户名和密码 
-> 5. 启动服务器和客户端：运行 `src/main/java/com/qst/dms/DmsNetServer` 类
-> 7. 登录系统：默认用户名和密码均为 `admin`
->
-> 方案二：
->
-> 1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
->
-> 2. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
->
-> 3. 创建数据库用户：在 MySQL 控制台创建 `admin` 用户，密码也为 `admin`，并赋予 admin 用户所有操作权限
->
->    ```sql
->    create user 'admin'@'localhost' identified by 'admin';
->    grant all on data_mining_system.* to 'admin'@'localhost' with grant option;
->    ```
->
-> 4. 启动服务器和客户端：在命令行控制台进入 `RELEASE` 目录下，使用 `java -jar data-mining-system.jar` 命令运行 jar 包
->
-> 5. 登录系统：默认用户名和密码均为 `admin`
+> 开发时间：2020.11 - 2020.12
 
-# 一、系统简介
+# 一、快速开始
+
+方案一：
+
+1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
+2. 打开工程：使用 `IntelliJ IDEA` 打开克隆的仓库或解压的工程文件，而后使用 `Maven` 工具更新工程模块依赖
+3. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
+4. 修改数据库连接信息：修改 `src/main/resources/mysql.properties` 中的数据库连接信息，设置你自己的用户名和密码 
+5. 运行程序：运行 `src/main/java/com/qst/dms/DmsNetServer` 类
+6. 登录系统：默认用户名和密码均为 `admin`
+
+方案二：
+
+1. 克隆仓库：使用 Git 克隆仓库或直接下载仓库压缩包到您的计算机
+
+2. 创建数据库和表并插入数据：登录 MySQL ，创建 `data_mining_system` 数据库，将 `src/main/resources/sql/data_mining_system.sql` 文件中的数据库表导入 data_mining_system 数据库中
+
+3. 创建数据库用户：在 MySQL 控制台创建 `admin` 用户，密码也为 `admin`，并赋予 admin 用户所有操作权限
+
+   ```sql
+   create user 'admin'@'localhost' identified by 'admin';
+   grant all on data_mining_system.* to 'admin'@'localhost' with grant option;
+   ```
+
+4. 运行程序：在命令行控制台进入 `RELEASE` 目录下，使用 `java -jar data-mining-system.jar` 命令运行 jar 包
+
+5. 登录系统：默认用户名和密码均为 `admin`
+
+# 二、系统简介
 
 基于 Java SE 的数据挖掘系统：基于客户端服务器端（Client-Server，C-S）模式，实现日志与物流数据信息的采集、匹配、保存、显示等功能，为数据分析挖掘提供基础支撑。
 
@@ -34,7 +36,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f494f94ccff14dbf88f21e4157eb545d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-# 二、需求分析
+# 三、需求分析
 
 1. C-S 模式：系统包括客户端应用程序、服务器端应用程序
 
@@ -48,7 +50,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/1b338a12104d4b749af82cdeeff04e73.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-# 三、任务分配
+# 四、任务分配
 
 1. 基于控制台的系统数据采集、匹配、显示和记录功能实现
 
@@ -88,7 +90,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/ea5b18dec2eb49bc84524e4ea10eceef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-# 四、功能要求
+# 五、功能要求
 
 1. 用户登录和注册功能：用户验证口令通过后登录系统，新用户进行注册，并将注册信息保存数据库
 
@@ -114,7 +116,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/296de39a32c44f6187c3c983c4bead6a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-# 五、项目结构
+# 六、项目结构
 
 
 ```
@@ -156,7 +158,7 @@ DMS
     	├── DruidUtil                 -- 德鲁伊连接池类
 ```
 
-# 六、功能演示
+# 七、功能演示
 
 ## 1. 用户注册
 
@@ -184,7 +186,7 @@ DMS
 
 ## 6. 日志和数据查询
 
->  单线程定时更新数据
+单线程定时更新数据
 
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210503222638722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTAwODg2Ng==,size_16,color_FFFFFF,t_70#pic_center)
 
