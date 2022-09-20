@@ -37,7 +37,7 @@
 
 基于 Java SE 的数据挖掘系统：基于客户端服务器端（Client-Server，C-S）模式，实现日志与物流数据信息的采集、匹配、保存、显示等功能，为数据分析挖掘提供基础支撑。
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/101333_ed21b842_8411295.png "dms.png")
+![输入图片说明](https://img-blog.csdnimg.cn/d2a3ca80e77446d396fe046f054f0f24.png#pic_center)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f494f94ccff14dbf88f21e4157eb545d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAU3ByaW5nLV8tQmVhcg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
