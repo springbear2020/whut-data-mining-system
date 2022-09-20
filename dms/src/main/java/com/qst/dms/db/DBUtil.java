@@ -16,7 +16,7 @@ public class DBUtil {
         // 通过Config获取MySQL数据库配置信息
         String driver = Config.getValue("driver");
         String url = Config.getValue("url");
-        String user = Config.getValue("user");
+        String user = Config.getValue("username");
         String pwd = Config.getValue("password");
         try {
             // 指定驱动程序
