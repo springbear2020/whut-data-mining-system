@@ -1,9 +1,9 @@
 <p align="center">
-    <img src="https://img.shields.io/static/v1?label=开发时间&message=20/11/09 - 20/12/31&color=007bff"/>
+    <img src="https://img.shields.io/static/v1?label=%E5%BC%80%E5%8F%91%E6%97%B6%E9%97%B4&message=20/11/09 - 20/12/31&color=007bff"/>
     <img src="https://img.shields.io/static/v1?label=Java&message=1.8.0_311&color=e83e8c"/>
     <img src="https://img.shields.io/static/v1?label=MySQL&message=8.0.28&color=fd7e14"/>
     <a href="https://github.com/springbear2020/whut-data-mining-system" target="_blank">
-        <img src="https://img.shields.io/static/v1?label=开源项目&message=whut-dms&color=20c997"/>
+        <img src="https://img.shields.io/static/v1?label=%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE&message=whut-dms&color=20c997"/>
     </a>
 </p>
 
