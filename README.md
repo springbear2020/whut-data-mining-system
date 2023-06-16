@@ -2,7 +2,7 @@
     <img src="https://img.shields.io/static/v1?label=开发时间&message=20/11/09 - 20/12/31&color=007bff"/>
     <img src="https://img.shields.io/static/v1?label=Java&message=1.8.0_311&color=e83e8c"/>
     <img src="https://img.shields.io/static/v1?label=MySQL&message=8.0.28&color=fd7e14"/>
-    <a href="https://github.com/springbear2020/whut-billing-management-system" target="_blank">
+    <a href="https://github.com/springbear2020/whut-data-mining-system" target="_blank">
         <img src="https://img.shields.io/static/v1?label=开源项目&message=whut-dms&color=20c997"/>
     </a>
 </p>
