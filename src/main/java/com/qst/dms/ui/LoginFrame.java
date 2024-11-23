@@ -44,7 +44,7 @@ public class LoginFrame extends JFrame {
         contentPane.add(lblName);
 
         //用户名输入文本框
-        nameField = new JTextField();
+        nameField = new JTextField("admin");
         nameField.setBounds(125, 61, 250, 24);
         contentPane.add(nameField);
         nameField.setColumns(10);
@@ -55,7 +55,7 @@ public class LoginFrame extends JFrame {
         contentPane.add(lblPwd);
 
         //密码输入文本框
-        passwordField = new JPasswordField();
+        passwordField = new JPasswordField("admin");
         passwordField.setBounds(125, 129, 250, 24);
         contentPane.add(passwordField);
 
